@@ -21,7 +21,7 @@ angular.module('recruitr')
   if($state.params.studentId){
     Profile.findStudent($state.params.studentId)
     .then(function(result){
-      $scope.student = result.data.profile;
+      $scope.student = result.data;
       $scope.editMode = true;
     });
   }
